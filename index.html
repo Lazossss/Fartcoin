@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <title>Fartcoin</title>
+  <style>
+    body {
+      background-color: #fffce9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    img {
+      cursor: pointer;
+      width: 300px;
+      transition: transform 0.2s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <img src="fartcoin.png" alt="Fartcoin" id="fartImage">
+
+  <audio id="fartSound" src="fart.mp3"></audio>
+
+  <script>
+    const img = document.getElementById('fartImage');
+    const snd = document.getElementById('fartSound');
+    img.addEventListener('click', () => {
+      snd.currentTime = 0;
+      snd.play();
+    });
+  </script>
+
+</body>
+</html>
